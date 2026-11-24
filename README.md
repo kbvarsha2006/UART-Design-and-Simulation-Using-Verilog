@@ -4,14 +4,14 @@
 Design and simulate a UART transmitter and receiver using Verilog HDL and open-source tools.
 
 ## Features
-- Serial data transmission
-- Serial data reception
-- 8-bit data communication
-- 1 start bit and 1 stop bit
-- TX and RX loopback testing
+- 8-bit serial data transmission and reception
+- 1 start bit (LOW)
+- 8 data bits (LSB first)
+- 1 stop bit (HIGH)
+- 9600 baud configuration for a 50 MHz clock
+- Parameterized clock cycles per bit
 
 ## Tools Used
-- Verilog HDL
 - Icarus Verilog
 - GTKWave
 - Yosys
@@ -23,8 +23,12 @@ Design and simulate a UART transmitter and receiver using Verilog HDL and open-s
 - uart.vcd - Simulation waveform
 - synthesis/ - Synthesized Verilog files and logs
 
+## Baud Rate Configuration
+Default CLKS_PER_BIT = 5208 for a 50 MHz clock and approximately 9600 baud.
+
+The testbench overrides CLKS_PER_BIT to 8 in both modules to speed up simulation.
+
 ## Simulation Results
-Four test cases were successfully verified:
 
 | Transmitted | Received | Result |
 |---|---|---|
@@ -33,9 +37,11 @@ Four test cases were successfully verified:
 | 00 | 00 | PASS |
 | FF | FF | PASS |
 
+All four test cases passed using TX-to-RX loopback simulation.
+
 ## Synthesis
 Both transmitter and receiver were synthesized using Yosys.
 Both modules passed the Yosys check with zero reported problems.
 
 ## Conclusion
-The UART transmitter and receiver were successfully designed and verified through loopback simulation.
+The UART transmitter and receiver were successfully designed, simulated and synthesized using open-source tools.

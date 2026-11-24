@@ -112,7 +112,7 @@ module uart_tx(clk, rst, tx_start, tx_data, tx, tx_busy);
   assign _18_ = & { _13_, _07_, _06_ };
   assign _19_ = | { _25_, _24_, _23_ };
   assign _21_ = bit_index == (* src = "uart_tx.v:57.29-57.43" *) 3'h7;
-  assign _20_ = clk_count == (* src = "uart_tx.v:69.25-69.52" *) 16'h0007;
+  assign _20_ = clk_count == (* src = "uart_tx.v:69.25-69.52" *) 16'h1457;
   assign tx_busy = | (* src = "uart_tx.v:22.23-22.36" *) state;
   (* src = "uart_tx.v:24.5-78.8" *)
   always @(posedge clk, posedge rst)
