@@ -9,13 +9,13 @@ wire tx, tx_busy;
 wire [7:0] rx_data;
 wire rx_done;
 
-uart_tx #(.CLKS_PER_BIT(8)) TX (
+uart_tx #(.CLKS_PER_BIT(5208)) TX (
     .clk(clk), .rst(rst),
     .tx_start(tx_start), .tx_data(tx_data),
     .tx(tx), .tx_busy(tx_busy)
 );
 
-uart_rx #(.CLKS_PER_BIT(8)) RX (
+uart_rx #(.CLKS_PER_BIT(5208)) RX (
     .clk(clk), .rst(rst),
     .rx(tx), .rx_data(rx_data), .rx_done(rx_done)
 );
@@ -68,7 +68,7 @@ end
 endtask
 
 initial begin
-    #20000;
+    #5000000;
     $display("ERROR: Simulation timeout!");
     $finish;
 end

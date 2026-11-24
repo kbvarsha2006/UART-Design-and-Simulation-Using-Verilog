@@ -26,7 +26,7 @@ Design and simulate a UART transmitter and receiver using Verilog HDL and open-s
 ## Baud Rate Configuration
 Default CLKS_PER_BIT = 5208 for a 50 MHz clock and approximately 9600 baud.
 
-The testbench overrides CLKS_PER_BIT to 8 in both modules to speed up simulation.
+The testbench uses CLKS_PER_BIT = 5208 in both modules to verify operation at approximately 9600 baud.
 
 ## Simulation Results
 
