@@ -4,55 +4,127 @@
 (* src = "uart_tx.v:1.1-80.10" *)
 module uart_tx(clk, rst, tx_start, tx_data, tx, tx_busy);
   (* src = "uart_tx.v:24.5-78.8" *)
-  wire [2:0] _00_;
+  wire [2:0] _000_;
   (* src = "uart_tx.v:24.5-78.8" *)
-  wire [15:0] _01_;
-  (* src = "uart_tx.v:24.5-78.8" *)
-  wire [1:0] _02_;
-  (* src = "uart_tx.v:24.5-78.8" *)
-  wire _03_;
-  (* src = "uart_tx.v:51.38-51.51" *)
-  (* unused_bits = "16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31" *)
-  wire [31:0] _04_;
-  (* src = "uart_tx.v:61.42-61.55" *)
-  wire [31:0] _05_;
-  wire _06_;
-  wire _07_;
-  wire _08_;
-  wire _09_;
-  wire _10_;
-  wire _11_;
-  wire _12_;
-  wire _13_;
-  wire _14_;
-  wire _15_;
-  wire _16_;
-  wire _17_;
-  wire _18_;
-  wire _19_;
-  (* src = "uart_tx.v:45.25-45.52" *)
-  wire _20_;
-  (* src = "uart_tx.v:57.29-57.43" *)
-  wire _21_;
-  wire [15:0] _22_;
-  wire _23_;
-  wire _24_;
-  wire _25_;
-  wire _26_;
-  wire [2:0] _27_;
-  wire [2:0] _28_;
-  wire [2:0] _29_;
-  wire [1:0] _30_;
-  wire [1:0] _31_;
-  wire [1:0] _32_;
-  wire [1:0] _33_;
-  wire [1:0] _34_;
-  wire _35_;
-  wire _36_;
-  wire _37_;
-  wire _38_;
-  (* src = "uart_tx.v:0.0-0.0" *)
-  wire _39_;
+  wire [15:0] _001_;
+  wire _002_;
+  wire _003_;
+  wire _004_;
+  wire _005_;
+  wire _006_;
+  wire _007_;
+  wire _008_;
+  wire _009_;
+  wire _010_;
+  wire _011_;
+  wire _012_;
+  wire _013_;
+  wire _014_;
+  wire _015_;
+  wire _016_;
+  wire _017_;
+  wire _018_;
+  wire _019_;
+  wire _020_;
+  wire _021_;
+  wire _022_;
+  wire _023_;
+  wire _024_;
+  wire _025_;
+  wire _026_;
+  wire _027_;
+  wire _028_;
+  wire _029_;
+  wire _030_;
+  wire _031_;
+  wire _032_;
+  wire _033_;
+  wire _034_;
+  wire _035_;
+  wire _036_;
+  wire _037_;
+  wire _038_;
+  wire _039_;
+  wire _040_;
+  wire _041_;
+  wire _042_;
+  wire _043_;
+  wire _044_;
+  wire _045_;
+  wire _046_;
+  wire _047_;
+  wire _048_;
+  wire _049_;
+  wire _050_;
+  wire _051_;
+  wire _052_;
+  wire _053_;
+  wire _054_;
+  wire _055_;
+  wire _056_;
+  wire _057_;
+  wire _058_;
+  wire _059_;
+  wire _060_;
+  wire _061_;
+  wire _062_;
+  wire _063_;
+  wire _064_;
+  wire _065_;
+  wire _066_;
+  wire _067_;
+  wire _068_;
+  wire _069_;
+  wire _070_;
+  wire _071_;
+  wire _072_;
+  wire _073_;
+  wire _074_;
+  wire _075_;
+  wire _076_;
+  wire _077_;
+  wire _078_;
+  wire _079_;
+  wire _080_;
+  wire _081_;
+  wire _082_;
+  wire _083_;
+  wire _084_;
+  wire _085_;
+  wire _086_;
+  wire _087_;
+  wire _088_;
+  wire _089_;
+  wire _090_;
+  wire _091_;
+  wire _092_;
+  wire _093_;
+  wire _094_;
+  wire _095_;
+  wire _096_;
+  wire _097_;
+  wire _098_;
+  wire _099_;
+  wire _100_;
+  wire _101_;
+  wire _102_;
+  wire _103_;
+  wire _104_;
+  wire _105_;
+  wire _106_;
+  wire _107_;
+  wire _108_;
+  wire _109_;
+  wire _110_;
+  wire _111_;
+  wire _112_;
+  wire _113_;
+  (* force_downto = 32'd1 *)
+  (* src = "uart_tx.v:0.0-0.0|uart_tx.v:32.13-76.20|/usr/bin/../share/yosys/techmap.v:576.21-576.22" *)
+  wire [1:0] _114_;
+  (* force_downto = 32'd1 *)
+  (* src = "uart_tx.v:0.0-0.0|uart_tx.v:32.13-76.20|/usr/bin/../share/yosys/techmap.v:576.21-576.22" *)
+  wire _115_;
   (* src = "uart_tx.v:19.15-19.24" *)
   reg [2:0] bit_index;
   (* src = "uart_tx.v:4.16-4.19" *)
@@ -79,136 +151,259 @@ module uart_tx(clk, rst, tx_start, tx_data, tx, tx_busy);
   (* src = "uart_tx.v:6.16-6.24" *)
   input tx_start;
   wire tx_start;
-  assign _05_ = bit_index + (* src = "uart_tx.v:62.44-62.57" *) 32'd1;
-  assign _04_ = clk_count + (* src = "uart_tx.v:73.38-73.51" *) 32'd1;
+  assign _047_ = _046_ | _083_;
+  assign _048_ = _047_ | _034_;
+  assign _049_ = _048_ ^ clk_count[12];
+  assign _050_ = _049_ | _090_;
+  assign _001_[12] = tx_busy & ~(_050_);
+  assign _051_ = _048_ | ~(clk_count[12]);
+  assign _052_ = _051_ ^ clk_count[13];
+  assign _053_ = _052_ | _090_;
+  assign _001_[13] = tx_busy & ~(_053_);
+  assign _054_ = ~(clk_count[13] & clk_count[12]);
+  assign _055_ = _054_ | _048_;
+  assign _056_ = _055_ ^ clk_count[14];
+  assign _057_ = _056_ | _090_;
+  assign _001_[14] = tx_busy & ~(_057_);
+  assign _058_ = _055_ | ~(clk_count[14]);
+  assign _059_ = _058_ ^ clk_count[15];
+  assign _060_ = _059_ | _090_;
+  assign _001_[15] = tx_busy & ~(_060_);
+  assign _000_[0] = ~(_091_ | bit_index[0]);
+  assign _061_ = bit_index[1] ^ bit_index[0];
+  assign _000_[1] = _061_ & ~(_091_);
+  assign _062_ = _105_ ^ bit_index[2];
+  assign _000_[2] = _103_ & ~(_062_);
+  assign _114_[0] = _009_ | ~(_091_);
+  assign _063_ = _096_ & _091_;
+  assign _114_[1] = tx_busy & ~(_063_);
+  assign _064_ = bit_index[0] ? data_reg[2] : data_reg[1];
+  assign _065_ = bit_index[0] ? data_reg[4] : data_reg[3];
+  assign _066_ = bit_index[1] ? _065_ : _064_;
+  assign _067_ = bit_index[0] ? data_reg[6] : data_reg[5];
+  assign _068_ = data_reg[7] & ~(bit_index[0]);
+  assign _069_ = bit_index[1] ? _068_ : _067_;
+  assign _070_ = bit_index[2] ? _069_ : _066_;
+  assign _071_ = _106_ & ~(_070_);
+  assign _072_ = _103_ & ~(_071_);
+  assign _073_ = data_reg[0] & ~(_096_);
+  assign _074_ = _073_ | _072_;
+  assign _115_ = _063_ ? _075_ : _074_;
+  assign _075_ = ~tx_start;
+  assign _009_ = ~(state[0] | state[1]);
+  assign _002_ = _009_ & ~(_075_);
+  assign _076_ = clk_count[1] & clk_count[0];
+  assign _077_ = clk_count[3] | clk_count[2];
+  assign _078_ = _076_ & ~(_077_);
+  assign _079_ = clk_count[4] | ~(clk_count[5]);
+  assign _080_ = clk_count[7] | ~(clk_count[6]);
+  assign _081_ = _080_ | _079_;
+  assign _082_ = _078_ & ~(_081_);
+  assign _083_ = ~(clk_count[9] & clk_count[8]);
+  assign _084_ = clk_count[11] | clk_count[10];
+  assign _085_ = _084_ | _083_;
+  assign _086_ = clk_count[13] | clk_count[12];
+  assign _087_ = clk_count[15] | clk_count[14];
+  assign _088_ = _087_ | _086_;
+  assign _089_ = _088_ | _085_;
+  assign _090_ = _082_ & ~(_089_);
+  assign _091_ = state[0] | ~(state[1]);
+  assign _092_ = _091_ | _090_;
+  assign _093_ = state[0] & state[1];
+  assign _094_ = _093_ & ~(_090_);
+  assign _095_ = _092_ & ~(_094_);
+  assign _096_ = state[1] | ~(state[0]);
+  assign _097_ = ~(_096_ | _090_);
+  assign _098_ = _091_ & ~(_093_);
+  assign _099_ = _009_ | ~(_096_);
+  assign _100_ = _098_ & ~(_099_);
+  assign _101_ = _100_ | _097_;
+  assign _102_ = _095_ & ~(_101_);
+  assign _103_ = ~_091_;
+  assign _104_ = ~bit_index[2];
+  assign _105_ = ~(bit_index[1] & bit_index[0]);
+  assign _106_ = _105_ | _104_;
+  assign _107_ = ~(_106_ & _090_);
+  assign _108_ = _103_ & ~(_107_);
+  assign _109_ = _009_ & ~(tx_start);
+  assign _110_ = _109_ | _108_;
+  assign _004_ = _102_ & ~(_110_);
+  assign _111_ = _092_ & ~(_097_);
+  assign _112_ = _090_ & ~(_106_);
+  assign _113_ = _091_ ? _096_ : _112_;
+  assign _003_ = _111_ & ~(_113_);
+  assign tx_busy = ~_009_;
+  assign _006_ = ~(state[0] & state[1]);
+  assign _007_ = _006_ & _092_;
+  assign _005_ = _007_ & ~(_097_);
+  assign _008_ = ~(_090_ | clk_count[0]);
+  assign _001_[0] = tx_busy & _008_;
+  assign _010_ = ~(clk_count[1] ^ clk_count[0]);
+  assign _011_ = _010_ | _090_;
+  assign _001_[1] = tx_busy & ~(_011_);
+  assign _012_ = ~(clk_count[1] & clk_count[0]);
+  assign _013_ = _012_ ^ clk_count[2];
+  assign _014_ = _013_ | _090_;
+  assign _001_[2] = tx_busy & ~(_014_);
+  assign _015_ = ~(_076_ & clk_count[2]);
+  assign _016_ = _015_ ^ clk_count[3];
+  assign _017_ = _016_ | _090_;
+  assign _001_[3] = tx_busy & ~(_017_);
+  assign _018_ = ~(clk_count[3] & clk_count[2]);
+  assign _019_ = _018_ | _012_;
+  assign _020_ = _019_ ^ clk_count[4];
+  assign _021_ = _020_ | _090_;
+  assign _001_[4] = tx_busy & ~(_021_);
+  assign _022_ = _019_ | ~(clk_count[4]);
+  assign _023_ = _022_ ^ clk_count[5];
+  assign _024_ = _023_ | _090_;
+  assign _001_[5] = tx_busy & ~(_024_);
+  assign _025_ = ~(clk_count[4] & clk_count[5]);
+  assign _026_ = _025_ | _019_;
+  assign _027_ = _026_ ^ clk_count[6];
+  assign _028_ = _027_ | _090_;
+  assign _001_[6] = tx_busy & ~(_028_);
+  assign _029_ = _026_ | ~(clk_count[6]);
+  assign _030_ = _029_ ^ clk_count[7];
+  assign _031_ = _030_ | _090_;
+  assign _001_[7] = tx_busy & ~(_031_);
+  assign _032_ = ~(clk_count[6] & clk_count[7]);
+  assign _033_ = _032_ | _025_;
+  assign _034_ = _033_ | _019_;
+  assign _035_ = _034_ ^ clk_count[8];
+  assign _036_ = _035_ | _090_;
+  assign _001_[8] = tx_busy & ~(_036_);
+  assign _037_ = _034_ | ~(clk_count[8]);
+  assign _038_ = _037_ ^ clk_count[9];
+  assign _039_ = _038_ | _090_;
+  assign _001_[9] = tx_busy & ~(_039_);
+  assign _040_ = _034_ | _083_;
+  assign _041_ = _040_ ^ clk_count[10];
+  assign _042_ = _041_ | _090_;
+  assign _001_[10] = tx_busy & ~(_042_);
+  assign _043_ = _040_ | ~(clk_count[10]);
+  assign _044_ = _043_ ^ clk_count[11];
+  assign _045_ = _044_ | _090_;
+  assign _001_[11] = tx_busy & ~(_045_);
+  assign _046_ = ~(clk_count[11] & clk_count[10]);
   (* src = "uart_tx.v:24.5-78.8" *)
   always @(posedge clk, posedge rst)
-    if (rst) state <= 2'h0;
-    else if (_16_) state <= _02_;
+    if (rst) data_reg[0] <= 1'h0;
+    else if (_002_) data_reg[0] <= tx_data[0];
   (* src = "uart_tx.v:24.5-78.8" *)
   always @(posedge clk, posedge rst)
-    if (rst) data_reg <= 8'h00;
-    else if (_17_) data_reg <= tx_data;
+    if (rst) data_reg[1] <= 1'h0;
+    else if (_002_) data_reg[1] <= tx_data[1];
+  (* src = "uart_tx.v:24.5-78.8" *)
+  always @(posedge clk, posedge rst)
+    if (rst) data_reg[2] <= 1'h0;
+    else if (_002_) data_reg[2] <= tx_data[2];
+  (* src = "uart_tx.v:24.5-78.8" *)
+  always @(posedge clk, posedge rst)
+    if (rst) data_reg[3] <= 1'h0;
+    else if (_002_) data_reg[3] <= tx_data[3];
+  (* src = "uart_tx.v:24.5-78.8" *)
+  always @(posedge clk, posedge rst)
+    if (rst) data_reg[4] <= 1'h0;
+    else if (_002_) data_reg[4] <= tx_data[4];
+  (* src = "uart_tx.v:24.5-78.8" *)
+  always @(posedge clk, posedge rst)
+    if (rst) data_reg[5] <= 1'h0;
+    else if (_002_) data_reg[5] <= tx_data[5];
+  (* src = "uart_tx.v:24.5-78.8" *)
+  always @(posedge clk, posedge rst)
+    if (rst) data_reg[6] <= 1'h0;
+    else if (_002_) data_reg[6] <= tx_data[6];
+  (* src = "uart_tx.v:24.5-78.8" *)
+  always @(posedge clk, posedge rst)
+    if (rst) data_reg[7] <= 1'h0;
+    else if (_002_) data_reg[7] <= tx_data[7];
   (* src = "uart_tx.v:24.5-78.8" *)
   always @(posedge clk, posedge rst)
     if (rst) tx <= 1'h1;
-    else if (_18_) tx <= _03_;
+    else if (_005_) tx <= _115_;
   (* src = "uart_tx.v:24.5-78.8" *)
   always @(posedge clk, posedge rst)
-    if (rst) bit_index <= 3'h0;
-    else if (_15_) bit_index <= _00_;
-  assign _06_ = { _24_, _20_ } != 2'h2;
-  assign _07_ = { _25_, _20_ } != 2'h2;
-  assign _08_ = | { _25_, _24_ };
-  assign _09_ = { _26_, tx_start } != 2'h2;
-  assign _10_ = { _24_, _20_, _21_ } != 3'h6;
-  assign _11_ = { _23_, _20_ } != 2'h2;
-  assign _12_ = | { _26_, _25_, _24_, _23_ };
-  assign _13_ = | { _26_, _25_, _24_ };
-  assign _14_ = { _24_, _20_, _21_ } != 3'h7;
-  assign _15_ = & { _14_, _08_, _07_, _06_ };
-  assign _16_ = & { _12_, _11_, _10_, _09_, _07_, _06_ };
-  assign _17_ = & { _26_, tx_start };
-  assign _18_ = & { _13_, _07_, _06_ };
-  assign _19_ = | { _25_, _24_, _23_ };
-  assign _21_ = bit_index == (* src = "uart_tx.v:57.29-57.43" *) 3'h7;
-  assign _20_ = clk_count == (* src = "uart_tx.v:69.25-69.52" *) 16'h1457;
-  assign tx_busy = | (* src = "uart_tx.v:22.23-22.36" *) state;
+    if (rst) clk_count[0] <= 1'h0;
+    else clk_count[0] <= _001_[0];
   (* src = "uart_tx.v:24.5-78.8" *)
   always @(posedge clk, posedge rst)
-    if (rst) clk_count <= 16'h0000;
-    else clk_count <= _01_;
-  function [15:0] _64_;
-    input [15:0] a;
-    input [31:0] b;
-    input [1:0] s;
-    (* full_case = 32'd1 *)
-    (* src = "uart_tx.v:0.0-0.0|uart_tx.v:32.13-76.20" *)
-    (* parallel_case *)
-    casez (s)
-      2'b?1:
-        _64_ = b[15:0];
-      2'b1?:
-        _64_ = b[31:16];
-      default:
-        _64_ = a;
-    endcase
-  endfunction
-  assign _01_ = _64_(16'hxxxx, { 16'h0000, _22_ }, { _26_, _19_ });
-  assign _22_ = _20_ ? (* full_case = 32'd1 *) (* src = "uart_tx.v:45.25-45.52|uart_tx.v:45.21-51.52" *) 16'h0000 : _04_[15:0];
-  assign _27_ = _21_ ? (* full_case = 32'd1 *) (* src = "uart_tx.v:57.29-57.43|uart_tx.v:57.25-63.28" *) 3'hx : _05_[2:0];
-  assign _28_ = _20_ ? (* full_case = 32'd1 *) (* src = "uart_tx.v:55.25-55.52|uart_tx.v:55.21-65.52" *) _27_ : 3'hx;
-  function [2:0] _68_;
-    input [2:0] a;
-    input [5:0] b;
-    input [1:0] s;
-    (* full_case = 32'd1 *)
-    (* src = "uart_tx.v:0.0-0.0|uart_tx.v:32.13-76.20" *)
-    (* parallel_case *)
-    casez (s)
-      2'b?1:
-        _68_ = b[2:0];
-      2'b1?:
-        _68_ = b[5:3];
-      default:
-        _68_ = a;
-    endcase
-  endfunction
-  assign _00_ = _68_(3'hx, { _29_, _28_ }, { _25_, _24_ });
-  assign _29_ = _20_ ? (* full_case = 32'd1 *) (* src = "uart_tx.v:45.25-45.52|uart_tx.v:45.21-51.52" *) 3'h0 : 3'hx;
-  assign _30_ = _20_ ? (* full_case = 32'd1 *) (* src = "uart_tx.v:69.25-69.52|uart_tx.v:69.21-73.52" *) 2'h0 : 2'hx;
-  function [1:0] _71_;
-    input [1:0] a;
-    input [7:0] b;
-    input [3:0] s;
-    (* full_case = 32'd1 *)
-    (* src = "uart_tx.v:0.0-0.0|uart_tx.v:32.13-76.20" *)
-    (* parallel_case *)
-    casez (s)
-      4'b???1:
-        _71_ = b[1:0];
-      4'b??1?:
-        _71_ = b[3:2];
-      4'b?1??:
-        _71_ = b[5:4];
-      4'b1???:
-        _71_ = b[7:6];
-      default:
-        _71_ = a;
-    endcase
-  endfunction
-  assign _02_ = _71_(2'hx, { _34_, _33_, _32_, _30_ }, { _26_, _25_, _24_, _23_ });
-  assign _23_ = state == (* full_case = 32'd1 *) (* src = "uart_tx.v:0.0-0.0|uart_tx.v:32.13-76.20" *) 2'h3;
-  assign _31_ = _21_ ? (* full_case = 32'd1 *) (* src = "uart_tx.v:57.29-57.43|uart_tx.v:57.25-63.28" *) 2'h3 : 2'hx;
-  assign _32_ = _20_ ? (* full_case = 32'd1 *) (* src = "uart_tx.v:55.25-55.52|uart_tx.v:55.21-65.52" *) _31_ : 2'hx;
-  assign _33_ = _20_ ? (* full_case = 32'd1 *) (* src = "uart_tx.v:45.25-45.52|uart_tx.v:45.21-51.52" *) 2'h2 : 2'hx;
-  assign _34_ = tx_start ? (* src = "uart_tx.v:37.25-37.33|uart_tx.v:37.21-41.24" *) 2'h1 : 2'hx;
-  assign _35_ = _21_ ? (* full_case = 32'd1 *) (* src = "uart_tx.v:57.29-57.43|uart_tx.v:57.25-63.28" *) 1'h1 : _39_;
-  assign _36_ = _20_ ? (* full_case = 32'd1 *) (* src = "uart_tx.v:55.25-55.52|uart_tx.v:55.21-65.52" *) _35_ : 1'hx;
-  function [0:0] _79_;
-    input [0:0] a;
-    input [2:0] b;
-    input [2:0] s;
-    (* full_case = 32'd1 *)
-    (* src = "uart_tx.v:0.0-0.0|uart_tx.v:32.13-76.20" *)
-    (* parallel_case *)
-    casez (s)
-      3'b??1:
-        _79_ = b[0:0];
-      3'b?1?:
-        _79_ = b[1:1];
-      3'b1??:
-        _79_ = b[2:2];
-      default:
-        _79_ = a;
-    endcase
-  endfunction
-  assign _03_ = _79_(1'hx, { _38_, _37_, _36_ }, { _26_, _25_, _24_ });
-  assign _24_ = state == (* full_case = 32'd1 *) (* src = "uart_tx.v:0.0-0.0|uart_tx.v:32.13-76.20" *) 2'h2;
-  assign _37_ = _20_ ? (* full_case = 32'd1 *) (* src = "uart_tx.v:45.25-45.52|uart_tx.v:45.21-51.52" *) data_reg[0] : 1'hx;
-  assign _25_ = state == (* full_case = 32'd1 *) (* src = "uart_tx.v:0.0-0.0|uart_tx.v:32.13-76.20" *) 2'h1;
-  assign _38_ = tx_start ? (* src = "uart_tx.v:37.25-37.33|uart_tx.v:37.21-41.24" *) 1'h0 : 1'h1;
-  assign _26_ = ! (* full_case = 32'd1 *) (* src = "uart_tx.v:0.0-0.0|uart_tx.v:32.13-76.20" *) state;
-  wire [7:0] _86_ = data_reg;
-  assign _39_ = _86_[$signed(_05_) +: 1];
+    if (rst) clk_count[1] <= 1'h0;
+    else clk_count[1] <= _001_[1];
+  (* src = "uart_tx.v:24.5-78.8" *)
+  always @(posedge clk, posedge rst)
+    if (rst) clk_count[2] <= 1'h0;
+    else clk_count[2] <= _001_[2];
+  (* src = "uart_tx.v:24.5-78.8" *)
+  always @(posedge clk, posedge rst)
+    if (rst) clk_count[3] <= 1'h0;
+    else clk_count[3] <= _001_[3];
+  (* src = "uart_tx.v:24.5-78.8" *)
+  always @(posedge clk, posedge rst)
+    if (rst) clk_count[4] <= 1'h0;
+    else clk_count[4] <= _001_[4];
+  (* src = "uart_tx.v:24.5-78.8" *)
+  always @(posedge clk, posedge rst)
+    if (rst) clk_count[5] <= 1'h0;
+    else clk_count[5] <= _001_[5];
+  (* src = "uart_tx.v:24.5-78.8" *)
+  always @(posedge clk, posedge rst)
+    if (rst) clk_count[6] <= 1'h0;
+    else clk_count[6] <= _001_[6];
+  (* src = "uart_tx.v:24.5-78.8" *)
+  always @(posedge clk, posedge rst)
+    if (rst) clk_count[7] <= 1'h0;
+    else clk_count[7] <= _001_[7];
+  (* src = "uart_tx.v:24.5-78.8" *)
+  always @(posedge clk, posedge rst)
+    if (rst) clk_count[8] <= 1'h0;
+    else clk_count[8] <= _001_[8];
+  (* src = "uart_tx.v:24.5-78.8" *)
+  always @(posedge clk, posedge rst)
+    if (rst) clk_count[9] <= 1'h0;
+    else clk_count[9] <= _001_[9];
+  (* src = "uart_tx.v:24.5-78.8" *)
+  always @(posedge clk, posedge rst)
+    if (rst) clk_count[10] <= 1'h0;
+    else clk_count[10] <= _001_[10];
+  (* src = "uart_tx.v:24.5-78.8" *)
+  always @(posedge clk, posedge rst)
+    if (rst) clk_count[11] <= 1'h0;
+    else clk_count[11] <= _001_[11];
+  (* src = "uart_tx.v:24.5-78.8" *)
+  always @(posedge clk, posedge rst)
+    if (rst) clk_count[12] <= 1'h0;
+    else clk_count[12] <= _001_[12];
+  (* src = "uart_tx.v:24.5-78.8" *)
+  always @(posedge clk, posedge rst)
+    if (rst) clk_count[13] <= 1'h0;
+    else clk_count[13] <= _001_[13];
+  (* src = "uart_tx.v:24.5-78.8" *)
+  always @(posedge clk, posedge rst)
+    if (rst) clk_count[14] <= 1'h0;
+    else clk_count[14] <= _001_[14];
+  (* src = "uart_tx.v:24.5-78.8" *)
+  always @(posedge clk, posedge rst)
+    if (rst) clk_count[15] <= 1'h0;
+    else clk_count[15] <= _001_[15];
+  (* src = "uart_tx.v:24.5-78.8" *)
+  always @(posedge clk, posedge rst)
+    if (rst) state[0] <= 1'h0;
+    else if (_004_) state[0] <= _114_[0];
+  (* src = "uart_tx.v:24.5-78.8" *)
+  always @(posedge clk, posedge rst)
+    if (rst) state[1] <= 1'h0;
+    else if (_004_) state[1] <= _114_[1];
+  (* src = "uart_tx.v:24.5-78.8" *)
+  always @(posedge clk, posedge rst)
+    if (rst) bit_index[0] <= 1'h0;
+    else if (_003_) bit_index[0] <= _000_[0];
+  (* src = "uart_tx.v:24.5-78.8" *)
+  always @(posedge clk, posedge rst)
+    if (rst) bit_index[1] <= 1'h0;
+    else if (_003_) bit_index[1] <= _000_[1];
+  (* src = "uart_tx.v:24.5-78.8" *)
+  always @(posedge clk, posedge rst)
+    if (rst) bit_index[2] <= 1'h0;
+    else if (_003_) bit_index[2] <= _000_[2];
 endmodule

@@ -1,5 +1,5 @@
 module uart_tx #(
-    parameter CLKS_PER_BIT = 5208
+    parameter CLKS_PER_BIT = 868
 )(
     input wire clk,
     input wire rst,

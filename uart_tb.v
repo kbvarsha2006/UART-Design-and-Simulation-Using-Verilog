@@ -9,18 +9,18 @@ wire tx, tx_busy;
 wire [7:0] rx_data;
 wire rx_done;
 
-uart_tx #(.CLKS_PER_BIT(5208)) TX (
+uart_tx #(.CLKS_PER_BIT(868)) TX (
     .clk(clk), .rst(rst),
     .tx_start(tx_start), .tx_data(tx_data),
     .tx(tx), .tx_busy(tx_busy)
 );
 
-uart_rx #(.CLKS_PER_BIT(5208)) RX (
+uart_rx #(.CLKS_PER_BIT(868)) RX (
     .clk(clk), .rst(rst),
     .rx(tx), .rx_data(rx_data), .rx_done(rx_done)
 );
 
-always #10 clk = ~clk;
+always #5 clk = ~clk;
 
 initial begin
     $dumpfile("uart.vcd");

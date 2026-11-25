@@ -8,7 +8,7 @@ Design and simulate a UART transmitter and receiver using Verilog HDL and open-s
 - 1 start bit (LOW)
 - 8 data bits (LSB first)
 - 1 stop bit (HIGH)
-- 9600 baud configuration for a 50 MHz clock
+- 115200 baud configuration for a 100 MHz clock
 - Parameterized clock cycles per bit
 
 ## Tools Used
@@ -24,9 +24,9 @@ Design and simulate a UART transmitter and receiver using Verilog HDL and open-s
 - synthesis/ - Synthesized Verilog files and logs
 
 ## Baud Rate Configuration
-Default CLKS_PER_BIT = 5208 for a 50 MHz clock and approximately 9600 baud.
+Default CLKS_PER_BIT = 868 for a 100 MHz clock and approximately 115200 baud.
 
-The testbench uses CLKS_PER_BIT = 5208 in both modules to verify operation at approximately 9600 baud.
+The testbench uses CLKS_PER_BIT = 868 in both modules to verify operation at approximately 115200 baud.
 
 ## Simulation Results
 
